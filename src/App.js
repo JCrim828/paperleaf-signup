@@ -1,33 +1,18 @@
 import { useState } from 'react';
-
-function Message(props) {
-  return <h1>{props.text}</h1>;
-}
-
-function Banner({text}) {
-  return (
-  <header className="banner">{text}</header>
-  );
-}
+import React from 'react';
+import { Navbar } from './components/Navbar';
+import { InfoBox } from './components/profileInfoBox';
+import './App.css';
 
 export default function webPage(){
-  
-  function Square({ character }) {
-    return (
-    <button className="square">{character}</button>
-    );
-  }
-
-  return (
-<div>
+  return(
   <div>
-    <Banner text= "*Logo*" />
-    <Square character="J"/>
-    <Square character="A"/>
-    <Square character="C"/>
-    <Square character="K"/>
+    <div>
+      <Navbar className='nav-bar'/>
+    </div>
+    <div className='item-box'>
+      <InfoBox />
+    </div>
   </div>
-  <Message text="Jack Criminger" />
-</div>
   );
 }
